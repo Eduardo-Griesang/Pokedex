@@ -30,12 +30,13 @@ main{
     position: relative;
 }
 
-.pokedex{
+.Pokedex{
     width: 100%;
 }
 
 .name-number{
     position: absolute;
+    font-family: 'Roboto', sans-serif;
     left: 36%;
     top: 58%;
     font-size: 120%;
@@ -69,7 +70,7 @@ main{
 .button{
     color: rgb(7, 206, 216);
     cursor: pointer;
-    background: rgb(22, 22, 22);
+    background: transparent;
     border: none;
     font-size: 80%;
 }
@@ -82,3 +83,61 @@ main{
     scale: 1.1;
 }
 
+@media screen and (max-width: 570px) {
+    .button:last-child{
+        margin-left: 4.0em;
+    }    
+}
+
+@media screen and (max-width: 536px) {
+    .name-number{
+        left: 34%;
+        top: 58%;
+        font-size: 110%;
+    }
+    .button:last-child{
+        margin-left: 3.2em;
+    }    
+}
+
+@media screen and (max-width: 476px) {
+    .input_search{
+        left: 19%;
+        padding: 7% 0;
+    }
+    .button:last-child{
+        margin-left: 2.5em;
+    }    
+}
+
+@media screen and (max-width: 425px) {
+    .name-number{
+        left: 33.2%;
+        font-size: 95%;
+    }
+    .input_search{
+        bottom: 10%;
+        left: 15%;
+        padding: 8% 0;
+    }
+    .buttons{
+        bottom: 25.5%;
+    }
+    .button:last-child{
+        margin-left: 2.1em;
+    }    
+}
+
+@media screen and (max-width: 375px) {
+    .name-number{
+        font-size: 90%;
+    }
+    .input_search{
+        bottom: 10%;
+        left: 12%;
+        padding: 8% 0;
+    }
+    .button:last-child{
+        margin-left: 1.8em;
+    }    
+}
