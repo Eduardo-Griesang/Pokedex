@@ -63,7 +63,7 @@ renderPokemom(searchPokemon);
 
 function openWindow() {
     alert("Utilize o sistema de busca para procurar seu Pokemom favorito por nome ou número ou os botões para navegar entre toda a Pokedex!" + 
-    "\n \n" + "Use the input sistem to search for your favorite Pokemon by its name or number or use the buttons to navigate through the entire Pokedex")
+    "\n \n \n" + "Use the input sistem to search for your favorite Pokemon by its name or number or use the buttons to navigate through the entire Pokedex")
 }
 
 setTimeout(openWindow, 150)
