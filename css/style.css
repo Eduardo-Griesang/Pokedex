@@ -34,9 +34,19 @@ main{
     width: 100%;
 }
 
+.type{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: absolute;
+    top: 32%;
+    left: 25%;
+}
+
 .name-number{
     position: absolute;
     font-family: 'Roboto', sans-serif;
+    font-weight: 300;
     left: 36%;
     top: 58%;
     font-size: 120%;
@@ -111,6 +121,10 @@ main{
 }
 
 @media screen and (max-width: 425px) {
+    .type{
+        left: 22%;
+        font-size: 0.8em;
+    }
     .name-number{
         left: 33.2%;
         font-size: 95%;

@@ -1,6 +1,8 @@
 const pokemonName = document.querySelector('.name');
 const pokemonNumber = document.querySelector('.number');
 const pokemonImg = document.querySelector('.pokemom_image');
+const pokemomType1 = document.querySelector('.type1')
+const pokemomType2 = document.querySelector('.type2')
 
 const form = document.querySelector('.form');
 const input = document.querySelector('.input_search')
@@ -29,11 +31,18 @@ const renderPokemom = async (pokemon) => {
     if(data){
         pokemonName.innerHTML = data.name;
         pokemonNumber.innerHTML = data.id;
+
+        pokemomType1.innerHTML = data.types[0].type.name;
+        pokemomType2.innerHTML = '';
+        pokemomType2.innerHTML = data.types[1].type.name;
+
         pokemonImg.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
         searchPokemon = data.id;
     }else{
         pokemonName.innerHTML = 'Not Found'
         pokemonNumber.innerHTML = '';
+        pokemomType1.innerHTML = '';
+        pokemomType2.innerHTML = '';
         pokemonImg.style.display = 'none';
     }
 }
