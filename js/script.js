@@ -32,11 +32,12 @@ const renderPokemom = async (pokemon) => {
         pokemonName.innerHTML = data.name;
         pokemonNumber.innerHTML = data.id;
 
+        pokemonImg.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
+        
         pokemomType1.innerHTML = data.types[0].type.name;
         pokemomType2.innerHTML = '';
         pokemomType2.innerHTML = data.types[1].type.name;
-
-        pokemonImg.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
+        
         searchPokemon = data.id;
     }else{
         pokemonName.innerHTML = 'Not Found'
@@ -45,6 +46,8 @@ const renderPokemom = async (pokemon) => {
         pokemomType2.innerHTML = '';
         pokemonImg.style.display = 'none';
     }
+    
+    console.log(data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'])
 }
 
 /* quando um numero ou nome de Pokemom é digitado ele faz a busca passando o input para o renderPokemom() */
