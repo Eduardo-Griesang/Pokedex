@@ -45,9 +45,7 @@ const renderPokemom = async (pokemon) => {
         pokemomType1.innerHTML = '';
         pokemomType2.innerHTML = '';
         pokemonImg.style.display = 'none';
-    }
-    
-    console.log(data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'])
+    }    
 }
 
 /* quando um numero ou nome de Pokemom é digitado ele faz a busca passando o input para o renderPokemom() */
@@ -72,6 +70,7 @@ buttonNext.addEventListener('click', () => {
 });
 
 renderPokemom(searchPokemon);
+
 
 function openWindow() {
     alert("Utilize o sistema de busca para procurar seu Pokemom favorito por nome ou número ou os botões para navegar entre toda a Pokedex!" + 
