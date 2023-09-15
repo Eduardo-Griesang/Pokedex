@@ -4,11 +4,18 @@ const pokemonImg = document.querySelector('.pokemom_image');
 const pokemomType1 = document.querySelector('.type1')
 const pokemomType2 = document.querySelector('.type2')
 
+const pokemonStats = document.querySelector('.stats');
+const pokemonHP = document.querySelector('.HP');
+const pokemonAttack = document.querySelector('.Attack');
+const pokemonDefense = document.querySelector('.Defense');
+const pokemonSpeed = document.querySelector('.Speed');
+
 const form = document.querySelector('.form');
 const input = document.querySelector('.input_search')
 
 const buttonPrev = document.querySelector('.btn-prev')
 const buttonNext = document.querySelector('.btn-next')
+const buttonUp = document.querySelector('.btn-up')
 
 let searchPokemon = 1;
 
@@ -32,6 +39,11 @@ const renderPokemom = async (pokemon) => {
     if(data){
         pokemonName.innerHTML = data.name;
         pokemonNumber.innerHTML = data.id;
+
+        pokemonHP.innerHTML = data.stats[0].base_stat
+        pokemonAttack.innerHTML = data.stats[1].base_stat
+        pokemonDefense.innerHTML = data.stats[2].base_stat
+        pokemonSpeed.innerHTML = data.stats[5].base_stat
 
         pokemonImg.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
         
@@ -69,6 +81,20 @@ buttonNext.addEventListener('click', () => {
     searchPokemon = searchPokemon + 1;
     renderPokemom(searchPokemon);
 });
+
+/* quanto o botão Up é clicado, ele mostra os stats dos pokemom atual */
+buttonUp.addEventListener('click', () => {
+    let display = pokemonStats.style.display
+    
+    if(display != 'block'){
+        pokemonStats.style.display = "block"
+        pokemonImg.style.right = "52%"
+    } else{
+        pokemonStats.style.display = "none"
+        pokemonImg.style.right = "43%"
+    }
+
+})
 
 renderPokemom(searchPokemon);
 
