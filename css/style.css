@@ -77,8 +77,14 @@ main{
     display: flex;;
 }
 
+.btn-up{
+    position: absolute;
+    right: 32.2%;
+    bottom: 30.6%;
+    transform: rotate(90deg);
+}
+
 .button{
-    color: rgb(7, 206, 216);
     cursor: pointer;
     background: transparent;
     border: none;
@@ -104,6 +110,10 @@ main{
         left: 34%;
         top: 58%;
         font-size: 110%;
+    }
+    .btn-up{
+        right: 32%;
+        bottom: 30.6%;
     }
     .button:last-child{
         margin-left: 3.2em;
@@ -133,6 +143,10 @@ main{
         bottom: 10%;
         left: 15%;
         padding: 8% 0;
+    }
+    .btn-up{
+        right: 31.5%;
+        bottom: 30%;
     }
     .buttons{
         bottom: 25.5%;
