@@ -37,6 +37,8 @@ const renderPokemom = async (pokemon) => {
     const data = await fetchPokemon(pokemon);
     
     if(data){
+        searchPokemon = data.id;
+        
         pokemonName.innerHTML = data.name;
         pokemonNumber.innerHTML = data.id;
 
@@ -50,8 +52,6 @@ const renderPokemom = async (pokemon) => {
         pokemomType1.innerHTML = data.types[0].type.name;
         pokemomType2.innerHTML = '';
         pokemomType2.innerHTML = data.types[1].type.name;
-        
-        searchPokemon = data.id;
     }else{
         pokemonName.innerHTML = 'Not Found'
         pokemonNumber.innerHTML = '';
@@ -104,4 +104,4 @@ function openWindow() {
     "\n \n \n" + "Use the input sistem to search for your favorite Pokemon by its name or number or use the buttons to navigate through the entire Pokedex and the Pokemon's stats")
 }
 
-setTimeout(openWindow, 150)
+setTimeout(openWindow, 20)
