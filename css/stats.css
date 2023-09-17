@@ -39,3 +39,21 @@
     padding: 0.1em;
     background-color: gold;
 }
+
+@media screen and (max-width: 536px) {
+    .stats{
+        right: 31%;
+    }
+}
+
+@media screen and (max-width: 463px) {
+    .stats{
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 355px) {
+    .stats{
+        font-size: 0.65em;
+    }
+}

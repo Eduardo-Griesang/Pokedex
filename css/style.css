@@ -165,7 +165,24 @@ main{
         left: 12%;
         padding: 8% 0;
     }
+    .btn-up{
+        right: 31.5%;
+    }
     .button:last-child{
         margin-left: 1.8em;
+    }    
+}
+
+@media screen and (max-width: 344px) {
+    .name-number{
+        font-size: 90%;
+    }
+    .input_search{
+        bottom: 10%;
+        left: 12%;
+        padding: 8% 0;
+    }
+    .button:last-child{
+        margin-left: 1.5em;
     }    
 }
