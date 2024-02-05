@@ -104,4 +104,4 @@ function openWindow() {
     "\n \n \n" + "Use the input sistem to search for your favorite Pokemon by its name or number or use the buttons to navigate through the entire Pokedex and the Pokemon's stats")
 }
 
-setTimeout(openWindow, 30)
+setTimeout(openWindow, 35)
